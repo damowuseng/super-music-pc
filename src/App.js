@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { memo } from 'react';
 
-function App() {
+import { renderRoutes } from 'react-router-config';
+import routes from "./router";
+import {HashRouter} from "react-router-dom";
+
+import AppHeader from './components/app-header';
+import AppFooter from './components/app-footer';
+
+
+export default memo(function App() {
   return (
-    <div>
-      app
-    </div>
+      <HashRouter>
+        <AppHeader/>
+        {renderRoutes(routes)}
+        <AppFooter/>
+      </HashRouter>
   )
-}
+})
 
-export default App;
+
