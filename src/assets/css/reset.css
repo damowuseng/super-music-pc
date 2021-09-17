@@ -1,5 +1,6 @@
 @import "~normalize.css";
 @import "base.css";
+@import "~antd/dist/antd.css";
 
 html, h1, h2, h3, h4, h5 {
     margin: 0;
